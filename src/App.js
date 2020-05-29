@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import Nav from './komponen/navbar'
+import Login from './komponen/login'
+import Loading from './komponen/loading'
+import Daftar from './komponen/daftar'
+import Berita from './komponen/listBerita'
+import DetBerita from './komponen/detailBerita'
+import Statistik from './komponen/dataStat'
+import TesCoro from './komponen/tesCorona'
+import InputBerita from './komponen/inputBerita'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Statistik />
+      <InputBerita />
+      <Berita />
+      <TesCoro />
+      <DetBerita />
+      <Loading />
     </div>
   );
 }

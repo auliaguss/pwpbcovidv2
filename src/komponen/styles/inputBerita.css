@@ -1,0 +1,50 @@
+.inputArt{
+  margin: 1rem auto;
+  box-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.8%;
+  background: #fff;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  text-align: left;
+  width:90%;
+}
+.inputArt .detailTeks{
+  text-align: center;
+  padding:1% 2%;
+}
+.inputArt .detailTeks .judul{
+  font-size: 2em;
+}
+
+.inputArt .detailTeks img{
+  /* margin:10%; */
+  margin: 2% 0 2% 0;
+  max-width:400px;
+}
+.inputBerita{
+  display: flex;
+  flex-direction: column;
+}
+.inputBerita .row{
+  display:flex;
+}
+  @media (min-width: 640px) {
+    .kotakArt {
+      flex-direction: row;
+      max-width: 90%;
+    }
+    .kotakArt .meta {
+      flex-basis: 40%;
+      height: auto;
+    }
+    .kotakArt .description {
+      flex-basis: 60%;
+    }
+    .kotakArt.alt {
+      flex-direction: row-reverse;
+    }
+    .kotakArt.alt .details {
+      padding-left: 25px;
+    }
+  }

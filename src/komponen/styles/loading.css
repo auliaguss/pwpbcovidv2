@@ -1,0 +1,31 @@
+.loader {
+    display: inline-block;
+    width: 230px;
+    height: 230px;
+    animation: loader 6s infinite ease;
+    margin-bottom: 20px;
+}
+.loader img{
+    width: 100%;
+}
+.loading{
+    display:block;
+    text-align: center;
+}
+@keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(70deg);
+    }
+    50% {
+      transform: rotate(150deg);
+    }
+    75% {
+      transform: rotate(280deg);
+    }    
+    100% {
+      transform: rotate(360deg);
+    }
+}
