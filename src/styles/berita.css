@@ -26,6 +26,10 @@
   text-align: center;
   padding: 1% 2%;
 }
+.detailArt .detailTeks .paragraf{
+  text-align: justify;
+  line-height:1.1;
+}
 .detailArt .detailTeks .judul {
   font-size: 2em;
 }
@@ -60,12 +64,6 @@
   font-size: 11px;
 }
 
-.kotakArt a {
-  color: inherit;
-}
-.kotakArt a:hover {
-  color: #5ad67d;
-}
 .kotakArt .photo:hover {
   transform: scale(1.3) rotate(3deg);
 }
@@ -77,6 +75,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+  object-fit:none;
   transition: transform 0.2s;
 }
 .kotakArt .details,
@@ -129,7 +128,7 @@
   font-size: 1rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: #006494;
+  color: #4acfff;
   margin-top: 5px;
 }
 .kotakArt .description .read-more {

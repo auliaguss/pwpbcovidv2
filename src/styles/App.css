@@ -19,11 +19,53 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
 
+.headline{
+  width: 100%;
+  height: 100%;
+  background:url('https://langgam.id/unggah/2020/05/NEGATIF-CORONA.jpg');
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+}
+.headline .isi{
+  background: rgba(0, 0, 0, 0.294);
+  color: white;
+  font-size: 3em;
+  width:100%;
+  height:100%;
+  padding:10%;
+  padding-left: 5%;
+  text-align: left;
+}
+.headline .isi button {
+  background:transparent;
+  border:1px solid white;
+  color:white;
+  font-size: 24px;
+  padding:10px;
+  cursor: pointer;
+  transition:.5s;
+}
+@media (max-width: 640px) {
+  .headline .isi{
+    font-size: 2em;
+  }
+  .headline .isi button{
+    font-size: 20px;
+  }
+  .iframe-container iframe{
+    width: 90%;
+  }
+}
+.headline .isi button:hover {
+  background:white;
+  color:black;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
