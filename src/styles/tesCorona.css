@@ -16,6 +16,7 @@
   border-radius: 10px;
   margin-right: 5%;
 }
+
 .tesOnline {
   flex: 4;
   width: 100%;
@@ -27,6 +28,22 @@
   grid-row-gap: 30px;
   justify-items: center;
 }
+.kotakTes {
+  width: 100%;
+  background-color: tomato;
+  color: white;
+  display: flex;
+  border-radius: 10px;
+}
+.kotakTes img {
+  object-fit: contain;
+  width: 60%;
+  border-radius: 10px;
+}
+.kotakTes div {
+  z-index: 2;
+}
+
 .kotakTes .tesOffline {
   width: 100%;
   background-color: tomato;

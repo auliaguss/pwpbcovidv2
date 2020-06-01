@@ -1,6 +1,7 @@
 import React from 'react'
 
 import 'styles/berita.css'
+import { Link } from 'react-router-dom'
 
 function berita(props) {
   return (
@@ -16,7 +17,9 @@ function berita(props) {
         <h2>{props.tgl}</h2>
         <p> {props.desc}.</p>
         <p className="read-more">
-          <a href="#">Selengkapnya</a>
+          <a href="#">
+            <Link to={'/berita/' + props.slug}>Selengkapnya</Link>
+          </a>
         </p>
       </div>
     </div>

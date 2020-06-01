@@ -42,7 +42,7 @@ export const KasusPerProvinsi = () => {
   }
 
   const fetchSemuaBerita = () => {
-    fetch(baseURL.dev + 'api/kasus-per-provinsi')
+    fetch(baseURL.prod + 'api/kasus-per-provinsi')
       .then((res) => res.json())
       .then((res) => {
         setDataKasusProvinsi(res)
@@ -56,8 +56,10 @@ export const KasusPerProvinsi = () => {
   }, [])
 
   return (
-    <>
-      {!loading ? (
+    <center>
+      <h2>Data Kasus Per-Provinsi</h2>
+      <br />
+      {!loading && dataKasusProvinsi && mapIndonesia ? (
         <div className="map-container">
           <Map center={center} zoom={6}>
             <GeoJSON key="indonesia" data={mapIndonesia} />
@@ -76,6 +78,6 @@ export const KasusPerProvinsi = () => {
       ) : (
         <Loading />
       )}
-    </>
+    </center>
   )
 }

@@ -7,33 +7,47 @@ import { KasusPerProvinsi } from '../komponen/kasusPerProvinsi'
 import { RSRujukan } from '../komponen/rsRujukan'
 import { KecamatanRawan } from '../komponen/kecamatanRawan'
 import { PieStatistik } from '../komponen/pieStatistik'
+import { ClickToShow } from '../komponen/clickToShow'
 
 const Statistik = () => {
   return (
     <div className="halaman-statistik">
       <Nav />
-      <PieStatistik />
-      <br />
-      <br />
-      <br />
-
-      <KasusPerProvinsi />
 
       <br />
       <br />
-      <br />
+      <center>
+        <ClickToShow title="Statistik Covid Hari Ini">
+          <PieStatistik />
+        </ClickToShow>
+        <br />
+        <br />
+        <br />
 
-      <RSRujukan />
+        <ClickToShow title="Data Kasus Corona Per-Provinsi">
+          <KasusPerProvinsi />
+        </ClickToShow>
 
-      <br />
-      <br />
-      <br />
+        <br />
+        <br />
+        <br />
 
-      <KecamatanRawan />
+        <ClickToShow title="Data RS Rujukan Di Jawa Barat">
+          <RSRujukan />
+        </ClickToShow>
 
-      <br />
-      <br />
-      <br />
+        <br />
+        <br />
+        <br />
+
+        <ClickToShow title="Data Kecamatan Rawan">
+          <KecamatanRawan />
+        </ClickToShow>
+
+        <br />
+        <br />
+        <br />
+      </center>
     </div>
   )
 }
