@@ -7,10 +7,10 @@ function navbar() {
   return (
     <nav className="stroke">
       <input type="checkbox" id="check" />
-      <label for="check" className="checkbtn">
-        <i class="fas fa-bars">Touch Me</i>
+      <label htmlFor="check" className="checkbtn">
+        <i className="fas fa-bars">Touch Me</i>
       </label>
-      <label className="logo">CodingNepal</label>
+      <label className="logo">PWPB Covid</label>
       <ul>
         <li>
           <a href="#">
@@ -18,10 +18,14 @@ function navbar() {
           </a>
         </li>
         <li>
-          <Link to="/berita">Berita</Link>
+          <a href="#">
+            <Link to="/berita">Berita</Link>
+          </a>
         </li>
         <li>
-          <Link to="/statistik">Statistik</Link>
+          <a href="#">
+            <Link to="/statistik">Statistik</Link>
+          </a>
         </li>
         <li>
           <a href="#">

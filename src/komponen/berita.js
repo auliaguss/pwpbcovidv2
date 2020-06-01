@@ -1,5 +1,7 @@
 import React from 'react'
 
+import 'styles/berita.css'
+
 function berita(props) {
   return (
     <div className="kotakArt">

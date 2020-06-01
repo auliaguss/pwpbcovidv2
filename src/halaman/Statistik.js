@@ -1,13 +1,39 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+import 'styles/leaflet.css'
 
 import Nav from 'komponen/navbar'
-import DataStatistik from 'komponen/dataStat'
+import { KasusPerProvinsi } from '../komponen/kasusPerProvinsi'
+import { RSRujukan } from '../komponen/rsRujukan'
+import { KecamatanRawan } from '../komponen/kecamatanRawan'
+import { PieStatistik } from '../komponen/pieStatistik'
 
-function Statistik() {
+const Statistik = () => {
   return (
     <div className="halaman-statistik">
       <Nav />
-      <DataStatistik />
+      <PieStatistik />
+      <br />
+      <br />
+      <br />
+
+      <KasusPerProvinsi />
+
+      <br />
+      <br />
+      <br />
+
+      <RSRujukan />
+
+      <br />
+      <br />
+      <br />
+
+      <KecamatanRawan />
+
+      <br />
+      <br />
+      <br />
     </div>
   )
 }
