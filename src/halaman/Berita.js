@@ -37,17 +37,23 @@ function Berita() {
   return (
     <div className="halaman-statistik">
       <Nav />
-
-      {!loading ? (
-        listBerita.data.map((data) => (
-          <BeritaItem
-            key={data.id}
-            gambar={baseURL.dev + 'storage/' + data.image}
-            tgl={new Date(data.created_at).toString()}
-            judul={data.title}
-            desc={data.excerpt}
-          />
-        ))
+      <br />
+      <br />
+      {!loading && listBerita.data.length > 0 ? (
+        listBerita.data.map((data) => {
+          data.image = data.image.replace('0\\', '0/')
+          data.image = data.image.replace('\\', '/')
+          return (
+            <BeritaItem
+              key={data.id}
+              gambar={baseURL.dev + 'storage/' + data.image}
+              tgl={new Date(data.created_at).toString()}
+              judul={data.title}
+              desc={data.excerpt}
+              slug={data.slug}
+            />
+          )
+        })
       ) : (
         <Loading />
       )}

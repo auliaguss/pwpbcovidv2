@@ -6,7 +6,6 @@ import { baseURL } from '../constants'
 import Loading from 'komponen/loading'
 
 export const PieStatistik = () => {
-  const [dataStatistik, setDataStatistik] = useState({})
   const [dataSet, setDataSet] = useState({})
   const [loading, setLoading] = useState(true)
 
@@ -40,12 +39,9 @@ export const PieStatistik = () => {
     fetch(baseURL.dev + 'api/statistik?hariIni=true')
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
         if (res.features.length === 2) {
-          setDataStatistik(res.features[1].attributes)
           setDataSetFromApi(res.features[1].attributes)
         } else {
-          setDataStatistik(res.features[0].attributes)
           setDataSetFromApi(res.features[0].attributes)
         }
         setLoading(false)
@@ -59,7 +55,7 @@ export const PieStatistik = () => {
 
   return (
     <div>
-      {!loading ? (
+      {!loading && dataSet ? (
         <div className="pie-container">
           <Pie
             data={dataSet}

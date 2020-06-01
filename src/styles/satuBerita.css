@@ -1,0 +1,11 @@
+.berita-wrapper {
+  padding: 1.5em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 650px) {
+  .berita-wrapper {
+    padding: 1.5em 4em;
+  }
+}

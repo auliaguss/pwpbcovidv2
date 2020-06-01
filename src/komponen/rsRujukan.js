@@ -67,8 +67,10 @@ export const RSRujukan = () => {
   }, [])
 
   return (
-    <>
-      {!loading ? (
+    <center>
+      <h2>Data Kecamatan Rawan</h2>
+      <br />
+      {!loading && dataRSRujukan && mapIndonesia ? (
         <div className="map-container">
           <Map center={center} zoom={6}>
             <GeoJSON key="indonesia" data={mapIndonesia} />
@@ -87,6 +89,6 @@ export const RSRujukan = () => {
       ) : (
         <Loading />
       )}
-    </>
+    </center>
   )
 }

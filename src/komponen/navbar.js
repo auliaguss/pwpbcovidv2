@@ -10,7 +10,7 @@ function navbar() {
       <label for="check" className="checkbtn" style={{ color: '#4acfff' }}>
         ≡
       </label>
-      <label className="logo">Logo</label>
+      <label className="logo">PWPB Covid</label>
       <ul>
         <li>
           <a href="#">
@@ -25,11 +25,6 @@ function navbar() {
         <li>
           <a href="#">
             <Link to="/statistik">Statistik</Link>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <Link to="/login">Login</Link>
           </a>
         </li>
       </ul>
