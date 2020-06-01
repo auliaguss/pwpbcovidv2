@@ -7,10 +7,10 @@ function navbar() {
   return (
     <nav className="stroke">
       <input type="checkbox" id="check" />
-      <label htmlFor="check" className="checkbtn">
-        <i className="fas fa-bars">Touch Me</i>
+      <label for="check" className="checkbtn" style={{ color: '#4acfff' }}>
+        ≡
       </label>
-      <label className="logo">PWPB Covid</label>
+      <label className="logo">Logo</label>
       <ul>
         <li>
           <a href="#">

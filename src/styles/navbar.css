@@ -13,7 +13,7 @@ nav{
     position:fixed;
     top: 0;
     padding:0;
-    box-shadow:0 0 10px #00b8f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 label.logo{
     color: #f2f2f2;
