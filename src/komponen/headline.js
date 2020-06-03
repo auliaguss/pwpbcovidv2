@@ -10,7 +10,7 @@ export const Headline = () => {
   const [loading, setLoading] = useState(true)
 
   const fetchBeritaTerbaru = () => {
-    fetch(baseURL.dev + 'api/post/terbaru')
+    fetch(baseURL.prod + 'api/post/terbaru')
       .then((res) => res.json())
       .then((res) => {
         res.image = res.image.replace('0\\', '0/')
@@ -32,10 +32,10 @@ export const Headline = () => {
           className="headline"
           style={{
             backgroundImage:
-              'url(' + baseURL.dev + 'storage/' + beritaTerbaru.image + ')',
+              'url(' + baseURL.prod + 'storage/' + beritaTerbaru.image + ')',
           }}
         >
-          <div className="isi">
+          <div className="isi" style={{color: "black"}}>
             {beritaTerbaru.title}
             <br />
 

@@ -2,6 +2,7 @@
     display: inline-block;
     width: 230px;
     height: 230px;
+    margin-top: 20px;
     animation: loader 6s infinite ease;
     margin-bottom: 20px;
 }

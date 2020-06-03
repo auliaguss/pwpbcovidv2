@@ -15,7 +15,7 @@ function Berita() {
   const [currentPage, setCurrentPage] = useState(1)
 
   const fetchSemuaBerita = () => {
-    fetch(baseURL.dev + 'api/posts?paginate=true&page=' + currentPage)
+    fetch(baseURL.prod + 'api/posts?paginate=true&page=' + currentPage)
       .then((res) => res.json())
       .then((res) => {
         setListBerita(res)
@@ -46,7 +46,7 @@ function Berita() {
           return (
             <BeritaItem
               key={data.id}
-              gambar={baseURL.dev + 'storage/' + data.image}
+              gambar={baseURL.prod + 'storage/' + data.image}
               tgl={new Date(data.created_at).toString()}
               judul={data.title}
               desc={data.excerpt}

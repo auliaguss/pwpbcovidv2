@@ -53,7 +53,7 @@ export const RSRujukan = () => {
   }
 
   const fetchRSRujukan = () => {
-    fetch(baseURL.dev + 'api/rs-rujukan')
+    fetch(baseURL.prod + 'api/rs-rujukan')
       .then((res) => res.json())
       .then((res) => {
         setDataRSRujukan(res)

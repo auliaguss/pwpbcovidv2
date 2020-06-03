@@ -14,7 +14,7 @@ export const PieStatistik = () => {
       labels: ['Meninggal', 'ODP', 'PDP', 'Dirawat', 'Sembuh'],
       datasets: [
         {
-          label: 'Population',
+          label: 'Populasi',
           data: [
             data.Jumlah_Pasien_Meninggal,
             data.ODP,
@@ -36,7 +36,7 @@ export const PieStatistik = () => {
   }
 
   const fetchStatistik = () => {
-    fetch(baseURL.dev + 'api/statistik?hariIni=true')
+    fetch(baseURL.prod + 'api/statistik?hariIni=true')
       .then((res) => res.json())
       .then((res) => {
         if (res.features.length === 2) {
@@ -64,6 +64,7 @@ export const PieStatistik = () => {
                 display: true,
                 text: 'Statistik Hari Ini',
                 fontSize: 25,
+                color: "black"
               },
               legend: {
                 display: true,
