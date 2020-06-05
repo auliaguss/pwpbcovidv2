@@ -14,7 +14,7 @@ export const PieStatistik = () => {
       labels: ['Meninggal', 'ODP', 'PDP', 'Dirawat', 'Sembuh'],
       datasets: [
         {
-          label: 'Population',
+          label: 'Populasi',
           data: [
             data.Jumlah_Pasien_Meninggal,
             data.ODP,
@@ -64,6 +64,7 @@ export const PieStatistik = () => {
                 display: true,
                 text: 'Statistik Hari Ini',
                 fontSize: 25,
+                color: "black"
               },
               legend: {
                 display: true,

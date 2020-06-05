@@ -41,8 +41,10 @@ function Berita() {
       <br />
       {!loading && listBerita.data.length > 0 ? (
         listBerita.data.map((data) => {
-          data.image = data.image.replace('0\\', '0/')
-          data.image = data.image.replace('\\', '/')
+          if (data.image) {
+            data.image = data.image.replace('0\\', '0/')
+            data.image = data.image.replace('\\', '/')
+          }
           return (
             <BeritaItem
               key={data.id}

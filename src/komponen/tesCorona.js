@@ -14,7 +14,7 @@ function tes() {
       <div className="tesOffline">
         <img src={rs}/>
         <div>
-        Unduh Daftar 132 RS Rujukan Corona
+        Unduh Daftar 132 RS Rujukan Corona <br/>
         <a href="https://covid19.kemkes.go.id/download/132_RS_Rujukan_PIE_Edit_Final_SK_MK_2.pdf">DISINI</a>
         </div>
       </div>
@@ -22,7 +22,7 @@ function tes() {
         <div className="kotakTes" style={{ background: '#e0004d' }}>
           <img src={halo} />
           <div>
-          Web Chat  
+          Web Chat <br/>
             <a
               target="_blank"
               href="https://www.halodoc.com/tanya-jawab-seputar-virus-corona/"
@@ -34,7 +34,7 @@ function tes() {
         <div className="kotakTes" style={{ background: '#3b72cf' }}>
           <img src={alodoc} />
           <div>
-            Web Chat
+            Web Chat <br/>
             <a
               target="_blank"
               href="https://www.alodokter.com/coba-cek-risiko-infeksi-virus-corona-atau-covid-19"
@@ -46,7 +46,7 @@ function tes() {
         <div className="kotakTes" style={{ background: '#d7f5ff', color: "#4acfff" }}>
           <img src={prixa} />
           <div>
-            Tes Online
+            Tes Online <br/>
             <a
               target="_blank"
               href="https://covid19.prixa.ai/partner/80b47a20-1353-49e9-af91-a0a5995ca89f/app/52b7d983-3e5d-49cc-9c99-508dc779aad3"
@@ -58,7 +58,7 @@ function tes() {
         <div className="kotakTes" style={{ background: '#fff', color: "#4acfff"}}>
           <img src={sehatq} />
           <div>
-          Konsultasi Melalui Aplikasi
+          Konsultasi Melalui Aplikasi <br/>
           <a
             target="_blank"
             href="https://play.google.com/store/apps/details?id=com.she.sehatq&hl=en"

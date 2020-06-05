@@ -13,8 +13,10 @@ export const Headline = () => {
     fetch(baseURL.prod + 'api/post/terbaru')
       .then((res) => res.json())
       .then((res) => {
-        res.image = res.image.replace('0\\', '0/')
-        res.image = res.image.replace('\\', '/')
+        if (res.image) {
+          res.image = res.image.replace('0\\', '0/')
+          res.image = res.image.replace('\\', '/')
+        }
         setBeritaTerbaru(res)
         setLoading(false)
       })
@@ -35,7 +37,7 @@ export const Headline = () => {
               'url(' + baseURL.prod + 'storage/' + beritaTerbaru.image + ')',
           }}
         >
-          <div className="isi">
+          <div className="isi" style={{ color: 'black' }}>
             {beritaTerbaru.title}
             <br />
 

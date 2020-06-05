@@ -21,31 +21,20 @@ const Statistik = () => {
           <PieStatistik />
         </ClickToShow>
         <br />
-        <br />
-        <br />
 
         <ClickToShow title="Data Kasus Corona Per-Provinsi">
           <KasusPerProvinsi />
         </ClickToShow>
-
-        <br />
-        <br />
         <br />
 
         <ClickToShow title="Data RS Rujukan Di Jawa Barat">
           <RSRujukan />
         </ClickToShow>
-
-        <br />
-        <br />
         <br />
 
         <ClickToShow title="Data Kecamatan Rawan">
           <KecamatanRawan />
         </ClickToShow>
-
-        <br />
-        <br />
         <br />
       </center>
     </div>

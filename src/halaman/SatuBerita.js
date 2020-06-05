@@ -19,8 +19,10 @@ export const SatuBerita = ({ match: { params } }) => {
     fetch(baseURL.prod + 'api/post/' + params.slug)
       .then((res) => res.json())
       .then((res) => {
-        res[0].image = res[0].image.replace('0\\', '0/')
-        res[0].image = res[0].image.replace('\\', '/')
+        if (res[0].image) {
+          res[0].image = res[0].image.replace('0\\', '0/')
+          res[0].image = res[0].image.replace('\\', '/')
+        }
         setBerita(res[0])
         setLoading(false)
       })
@@ -49,8 +51,8 @@ export const SatuBerita = ({ match: { params } }) => {
               <br />
             </div>
             <div style={{ padding: '2em' }}>
-              <h3 style={{ color: 'white' }}>{berita.excerpt}</h3>
-              <p style={{ color: 'white' }}>
+              <h3 style={{ color: 'black' }}>{berita.excerpt}</h3>
+              <p style={{ color: '#4acfff' }}>
                 {new Date(berita.created_at).toString()}
               </p>
             </div>
