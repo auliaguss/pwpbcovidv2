@@ -7,10 +7,7 @@ function berita(props) {
   return (
     <div className="kotakArt">
       <div className="meta">
-        <div
-          className="photo"
-          style={{ backgroundImage: `url(${props.gambar})` }}
-        ></div>
+        <div className="photo" style={{ backgroundImage: props.gambar }}></div>
       </div>
       <div className="description">
         <h1>{props.judul}</h1>

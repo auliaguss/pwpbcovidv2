@@ -39,12 +39,14 @@ export const PieStatistik = () => {
     fetch(baseURL.prod + 'api/statistik?hariIni=true')
       .then((res) => res.json())
       .then((res) => {
-        if (res.features.length === 2) {
-          setDataSetFromApi(res.features[1].attributes)
-        } else {
-          setDataSetFromApi(res.features[0].attributes)
+        if (res.features.length !== 0) {
+          if (res.features.length === 2) {
+            setDataSetFromApi(res.features[1].attributes)
+          } else {
+            setDataSetFromApi(res.features[0].attributes)
+          }
+          setLoading(false)
         }
-        setLoading(false)
       })
   }
 
@@ -64,7 +66,7 @@ export const PieStatistik = () => {
                 display: true,
                 text: 'Statistik Hari Ini',
                 fontSize: 25,
-                color: "black"
+                color: 'black',
               },
               legend: {
                 display: true,

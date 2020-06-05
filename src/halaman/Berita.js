@@ -44,11 +44,16 @@ function Berita() {
           if (data.image) {
             data.image = data.image.replace('0\\', '0/')
             data.image = data.image.replace('\\', '/')
+            data.image = 'url(' + baseURL.prod + 'storage/' + data.image + ')'
+            // ? Hapus jika server local, karena server heroku tidak support image upload
+            data.image = ''
+          } else {
+            data.image = ''
           }
           return (
             <BeritaItem
               key={data.id}
-              gambar={baseURL.prod + 'storage/' + data.image}
+              gambar={data.image}
               tgl={new Date(data.created_at).toString()}
               judul={data.title}
               desc={data.excerpt}

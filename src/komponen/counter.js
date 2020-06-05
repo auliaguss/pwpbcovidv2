@@ -36,6 +36,8 @@ export const Counter = () => {
   return (
     <div>
       {!loading &&
+      counterDunia &&
+      counterIndonesia &&
       counterDunia.confirmed.value &&
       counterIndonesia.confirmed.value ? (
         <div className="counter">

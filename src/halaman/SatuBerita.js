@@ -22,6 +22,11 @@ export const SatuBerita = ({ match: { params } }) => {
         if (res[0].image) {
           res[0].image = res[0].image.replace('0\\', '0/')
           res[0].image = res[0].image.replace('\\', '/')
+          res[0].image = 'url(' + baseURL.prod + 'storage/' + res[0].image + ')'
+          // ? Hapus jika server local, karena server heroku tidak support image upload
+          res[0].image = ''
+        } else {
+          res[0].image = ''
         }
         setBerita(res[0])
         setLoading(false)
@@ -37,13 +42,15 @@ export const SatuBerita = ({ match: { params } }) => {
     <div className="halaman-statistik">
       <Nav />
 
+      <br />
+      <br />
+
       {!loading ? (
         <div className="berita-wrapper">
           <div
             className="headline"
             style={{
-              backgroundImage:
-                'url(' + baseURL.prod + 'storage/' + berita.image + ')',
+              backgroundImage: berita.image,
             }}
           >
             <div className="isi">

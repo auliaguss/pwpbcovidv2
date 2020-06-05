@@ -16,6 +16,11 @@ export const Headline = () => {
         if (res.image) {
           res.image = res.image.replace('0\\', '0/')
           res.image = res.image.replace('\\', '/')
+          res.image = 'url(' + baseURL.prod + 'storage/' + res.image + ')'
+          // ? Hapus jika server local, karena server heroku tidak support image upload
+          res.image = ''
+        } else {
+          res.image = ''
         }
         setBeritaTerbaru(res)
         setLoading(false)
@@ -33,11 +38,10 @@ export const Headline = () => {
         <div
           className="headline"
           style={{
-            backgroundImage:
-              'url(' + baseURL.prod + 'storage/' + beritaTerbaru.image + ')',
+            backgroundImage: beritaTerbaru.image,
           }}
         >
-          <div className="isi" style={{ color: 'black' }}>
+          <div className="isi">
             {beritaTerbaru.title}
             <br />
 

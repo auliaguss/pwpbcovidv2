@@ -26,9 +26,9 @@
   text-align: center;
   padding: 1% 2%;
 }
-.detailArt .detailTeks .paragraf{
+.detailArt .detailTeks .paragraf {
   text-align: justify;
-  line-height:1.1;
+  line-height: 1.1;
 }
 .detailArt .detailTeks .judul {
   font-size: 2em;
@@ -72,10 +72,11 @@
 }
 .kotakArt .photo {
   height: 200px;
+  background-image: url('https://langgam.id/unggah/2020/05/NEGATIF-CORONA.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  object-fit:none;
+  object-fit: none;
   transition: transform 0.2s;
 }
 .kotakArt .details,
