@@ -19,7 +19,7 @@ export const Headline = () => {
           res.image = res.image.replace('\\', '/')
           res.image = 'url(' + baseURL.dev + 'storage/' + res.image + ')'
           // ? Hapus jika server local, karena server heroku tidak support image upload
-          res.image = ''
+          // res.image = ''
         } else {
           res.image = ''
         }

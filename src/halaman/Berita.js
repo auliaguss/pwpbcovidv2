@@ -46,7 +46,7 @@ function Berita() {
             data.image = data.image.replace('\\', '/')
             data.image = 'url(' + baseURL.dev + 'storage/' + data.image + ')'
             // ? Hapus jika server local, karena server heroku tidak support image upload
-            data.image = ''
+            // data.image = ''
           } else {
             data.image = ''
           }
