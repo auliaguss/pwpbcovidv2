@@ -40,7 +40,7 @@ export const KecamatanRawan = () => {
   }
 
   const fetchKecamatanRawan = () => {
-    fetch(baseURL.prod + 'api/kecamatan-rawan')
+    fetch(baseURL.dev + 'api/kecamatan-rawan')
       .then((res) => res.json())
       .then((res) => {
         setDataKecamatanRawan(res)

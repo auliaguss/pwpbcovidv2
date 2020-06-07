@@ -36,7 +36,7 @@ export const PieStatistik = () => {
   }
 
   const fetchStatistik = () => {
-    fetch(baseURL.prod + 'api/statistik?hariIni=true')
+    fetch(baseURL.dev + 'api/statistik?hariIni=true&interval=4')
       .then((res) => res.json())
       .then((res) => {
         if (res.features.length !== 0) {

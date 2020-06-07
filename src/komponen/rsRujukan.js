@@ -53,7 +53,7 @@ export const RSRujukan = () => {
   }
 
   const fetchRSRujukan = () => {
-    fetch(baseURL.prod + 'api/rs-rujukan')
+    fetch(baseURL.dev + 'api/rs-rujukan')
       .then((res) => res.json())
       .then((res) => {
         setDataRSRujukan(res)
@@ -68,7 +68,7 @@ export const RSRujukan = () => {
 
   return (
     <center>
-      <h2>Data Kecamatan Rawan</h2>
+      <h2>Data RS Rujukan</h2>
       <br />
       {!loading && dataRSRujukan && mapIndonesia ? (
         <div className="map-container">

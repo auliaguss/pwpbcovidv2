@@ -16,15 +16,15 @@ export const SatuBerita = ({ match: { params } }) => {
   const [loading, setLoading] = useState(true)
 
   const fetchSemuaBerita = () => {
-    fetch(baseURL.prod + 'api/post/' + params.slug)
+    fetch(baseURL.dev + 'api/post/' + params.slug)
       .then((res) => res.json())
       .then((res) => {
         if (res[0].image) {
           res[0].image = res[0].image.replace('0\\', '0/')
           res[0].image = res[0].image.replace('\\', '/')
-          res[0].image = 'url(' + baseURL.prod + 'storage/' + res[0].image + ')'
+          res[0].image = 'url(' + baseURL.dev + 'storage/' + res[0].image + ')'
           // ? Hapus jika server local, karena server heroku tidak support image upload
-          res[0].image = ''
+          // res[0].image = ''
         } else {
           res[0].image = ''
         }

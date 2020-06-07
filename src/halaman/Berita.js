@@ -15,7 +15,7 @@ function Berita() {
   const [currentPage, setCurrentPage] = useState(1)
 
   const fetchSemuaBerita = () => {
-    fetch(baseURL.prod + 'api/posts?paginate=true&page=' + currentPage)
+    fetch(baseURL.dev + 'api/posts?paginate=true&page=' + currentPage)
       .then((res) => res.json())
       .then((res) => {
         setListBerita(res)
@@ -44,7 +44,7 @@ function Berita() {
           if (data.image) {
             data.image = data.image.replace('0\\', '0/')
             data.image = data.image.replace('\\', '/')
-            data.image = 'url(' + baseURL.prod + 'storage/' + data.image + ')'
+            data.image = 'url(' + baseURL.dev + 'storage/' + data.image + ')'
             // ? Hapus jika server local, karena server heroku tidak support image upload
             data.image = ''
           } else {

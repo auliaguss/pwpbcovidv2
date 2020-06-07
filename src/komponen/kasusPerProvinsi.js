@@ -42,7 +42,7 @@ export const KasusPerProvinsi = () => {
   }
 
   const fetchSemuaBerita = () => {
-    fetch(baseURL.prod + 'api/kasus-per-provinsi')
+    fetch(baseURL.dev + 'api/kasus-per-provinsi')
       .then((res) => res.json())
       .then((res) => {
         setDataKasusProvinsi(res)

@@ -4,19 +4,20 @@ import { baseURL } from '../constants'
 
 import Loading from 'komponen/loading'
 import { Link } from 'react-router-dom'
+import { isLocalhost } from '../serviceWorker'
 
 export const Headline = () => {
   const [beritaTerbaru, setBeritaTerbaru] = useState({})
   const [loading, setLoading] = useState(true)
 
   const fetchBeritaTerbaru = () => {
-    fetch(baseURL.prod + 'api/post/terbaru')
+    fetch(baseURL.dev + 'api/post/terbaru')
       .then((res) => res.json())
       .then((res) => {
         if (res.image) {
           res.image = res.image.replace('0\\', '0/')
           res.image = res.image.replace('\\', '/')
-          res.image = 'url(' + baseURL.prod + 'storage/' + res.image + ')'
+          res.image = 'url(' + baseURL.dev + 'storage/' + res.image + ')'
           // ? Hapus jika server local, karena server heroku tidak support image upload
           res.image = ''
         } else {
